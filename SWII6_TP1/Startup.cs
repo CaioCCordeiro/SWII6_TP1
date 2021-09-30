@@ -18,10 +18,10 @@ namespace SWII6_TP1
         public void Configure(IApplicationBuilder app)
         {
             var builder = new RouteBuilder(app);
-            builder.MapRoute("/nomeLivro",BookNames);
-            builder.MapRoute("/TotalToString",TotalToString);
-            builder.MapRoute("/NomeDosAutores",NomeDosAutores);
-            builder.MapRoute("/livro/ApresentaLivro", GerarHtml);
+            builder.MapRoute("nomeLivro",BookNames);
+            builder.MapRoute("TotalToString",TotalToString);
+            builder.MapRoute("NomeDosAutores",NomeDosAutores);
+            builder.MapRoute("livro/ApresentaLivro", GerarHtml);
             var rotas = builder.Build();
             app.UseRouter(rotas);
         }
